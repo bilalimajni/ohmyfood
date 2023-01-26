@@ -72,6 +72,10 @@ header .explorer-btn {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   margin-top: 30px;
+  cursor: pointer;
+}
+header .explorer-btnhover {
+  background: gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 header .explorer-btn-p {
   color: #000000;
@@ -84,6 +88,17 @@ header .explorer-btn-p {
   color: white;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+nav .blocnav {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 nav .titlenav {
   color: #000000;
   font-family: "Roboto";
@@ -91,13 +106,22 @@ nav .titlenav {
   font-weight: 700;
   font-size: 24px;
   margin-left: 10%;
+  display: flex;
+  justify-content: start;
+  margin: 0px;
+  margin-bottom: 10px;
+  right: 0px;
+  align-self: flex-start;
   color: #000000;
 }
 nav .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
+  width: 350px;
 }
 nav .navigation-btn {
   width: 322.49px;
@@ -112,6 +136,20 @@ nav .navigation-btn {
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  cursor: pointer;
+}
+nav .navigation-btn::before {
+  content: "1 ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -1px;
 }
 nav .navigation-btn:hover {
   background: #F5EDFF;
@@ -129,4 +167,161 @@ nav .navigation .navigation-btntext {
   color: #000000;
   margin: 0px;
   margin-left: 10px;
+}
+
+.bloccards {
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+}
+.bloccards .sectiontitle {
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-self: flex-start;
+  color: #000000;
+}
+.bloccards .lescards {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 351px;
+}
+.bloccards .card {
+  height: 251px;
+  width: 350px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.bloccards .cardtextcoeur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.bloccards .card p {
+  margin-bottom: 2px;
+}
+.bloccards .card .textcards {
+  margin: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.bloccards .card i {
+  display: flex;
+  align-items: flex-end;
+  height: 21.0003814697px;
+  width: 21.6768798828px;
+}
+
+.img {
+  width: 350px;
+  height: 180px;
+  box-sizing: border-box;
+  border-radius: 15px 15px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img ul {
+  margin: 0px;
+}
+.img li {
+  color: white;
+}
+.img .img::before {
+  height: 29px;
+  width: 80px;
+  border-radius: 2px;
+  background: #99E2D0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.l {
+  position: relative;
+}
+
+.l::before {
+  content: "Nouveau ";
+  display: inline-block;
+  display: flex;
+  width: 80px;
+  height: 29px;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  top: 15px;
+  /* Green */
+  background: #99E2D0;
+  /* Shadow/ss */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.liencards {
+  display: inline-block;
+  width: 350px;
+  height: 251px;
+}
+
+footer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 197px;
+  width: 100%;
+  background: #353535;
+}
+footer .blocfooter {
+  margin-left: 15px;
+  width: 400px;
+}
+footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+footer li {
+  color: #000000;
+  font-family: "Roboto";
+  font-style: normal;
+  color: white;
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+footer li a {
+  color: white;
+}
+footer .titlefooter {
+  color: white;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+footer .fa-sharp {
+  margin-right: 10px;
+}
+
 }/*# sourceMappingURL=style.css.map */
