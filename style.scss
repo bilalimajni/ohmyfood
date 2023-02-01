@@ -101,7 +101,8 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    .blocnav{
+
+    .blocnav {
         width: 350px;
         display: flex;
         flex-direction: column;
@@ -144,18 +145,26 @@ nav {
             cursor: pointer;
 
             &::before {
+               
+               
+                counter-increment:  (compteListe 1) ;
+                content: counter(compteListe) " ";
+        
+                    background: #9356dc;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    position: absolute;
+                    left: -1px;
 
-                content: "1 ";
-                background: #9356dc;
-                height: 1.5rem;
-                width: 1.5rem;
-                border-radius: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #fff;
-                position: absolute;
-                left: -1px;
+              
+
+
+
 
             }
 
@@ -164,6 +173,7 @@ nav {
                 /* Shadow/Instructions */
 
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+                color:#9356DC;
                 border-radius: 20px;
 
             }
@@ -211,23 +221,25 @@ nav {
     }
 
     .card {
+        display: flex;
+        flex-direction: column;
 
         @include cardpage1;
         margin-bottom: 15px;
 
         &textcoeur {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 15px;
-            margin-right: 25px;
+          
             cursor: pointer;
+            width: 200px;
+          
 
 
         }
+       
 
         p {
-            margin-bottom: 2px;
+            margin-bottom: 5px;
+            margin-left: 15px;
         }
 
         .textcards {
@@ -235,12 +247,41 @@ nav {
             margin-left: 15px;
             margin-right: 15px;
         }
+        i{
+            position: absolute;
+            font-size: 21.8px;
+            transform:  translate(-6.4px, -3px);
+        }
 
-        i {
+       .heartsolide{
             display: flex;
             align-items: flex-end;
-            height: 21.000381469726562px;
-            width: 21.6768798828125px;
+           
+         
+           color: transparent;
+     
+
+           opacity: 0; 
+           background-clip: text;
+           -webkit-background-clip: text;
+            transition: all 0.33s ease-out;
+       
+           
+            
+           
+    
+           &:hover{
+            transform:translate(-6.4px, -3px) scale(1.1);
+          
+              background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            
+             
+            opacity: 1;
+    
+            
+           }
+           
+           
 
 
 
@@ -249,6 +290,17 @@ nav {
     }
 
 }
+ .heart{
+            display: flex;
+            align-items: center;
+            width:30px;
+            justify-content: flex-end;
+            position: absolute;
+            right: 30px;
+             bottom: 30px;
+          
+        }
+      
 
 .img {
     @include imgrestaurant;
@@ -285,6 +337,7 @@ nav {
     display: flex;
     align-items: center;
     top: 15px;
+    color: #008766 ; 
 
 
 
@@ -300,6 +353,9 @@ nav {
 }
 
 a {
+   
+    display: flex;
+   
 
     text-decoration: none;
     color: #000000;
@@ -307,9 +363,9 @@ a {
 }
 
 .liencards {
-    display: inline-block;
-    width: 350px;
-    height: 251px;
+    display: flex;
+   width: 350px;
+   
 }
 
 footer {
@@ -340,7 +396,8 @@ footer {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        a{
+
+        a {
             color: white;
         }
 
@@ -363,8 +420,8 @@ footer {
 
 
 @media screen and (max-width: 970px) {
-  .explorerparagraphe{
-    width: 100%;
-  }
-   
-  }
+    .explorerparagraphe {
+        width: 100%;
+    }
+
+}

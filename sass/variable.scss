@@ -2,3 +2,8 @@ $Primaire :#9356DC ;
 $Secondaire:#FF79DA ;
 $Tertiaire:#99E2D0;
 $grey: #D2D2D2;
+$i:1;
+
+@while $i <3 {
+    $i: $i+1;
+  }

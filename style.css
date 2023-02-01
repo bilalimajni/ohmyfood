@@ -139,7 +139,8 @@ nav .navigation-btn {
   cursor: pointer;
 }
 nav .navigation-btn::before {
-  content: "1 ";
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
   background: #9356dc;
   height: 1.5rem;
   width: 1.5rem;
@@ -155,6 +156,7 @@ nav .navigation-btn:hover {
   background: #F5EDFF;
   /* Shadow/Instructions */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  color: #9356DC;
   border-radius: 20px;
 }
 nav .navigation .navigation-btntext {
@@ -193,6 +195,8 @@ nav .navigation .navigation-btntext {
   width: 351px;
 }
 .bloccards .card {
+  display: flex;
+  flex-direction: column;
   height: 251px;
   width: 350px;
   background: #FFFFFF;
@@ -201,15 +205,12 @@ nav .navigation .navigation-btntext {
   margin-bottom: 15px;
 }
 .bloccards .cardtextcoeur {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 15px;
-  margin-right: 25px;
   cursor: pointer;
+  width: 200px;
 }
 .bloccards .card p {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  margin-left: 15px;
 }
 .bloccards .card .textcards {
   margin: 0px;
@@ -217,10 +218,33 @@ nav .navigation .navigation-btntext {
   margin-right: 15px;
 }
 .bloccards .card i {
+  position: absolute;
+  font-size: 21.8px;
+  transform: translate(-6.4px, -3px);
+}
+.bloccards .card .heartsolide {
   display: flex;
   align-items: flex-end;
-  height: 21.0003814697px;
-  width: 21.6768798828px;
+  color: transparent;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.33s ease-out;
+}
+.bloccards .card .heartsolide:hover {
+  transform: translate(-6.4px, -3px) scale(1.1);
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  opacity: 1;
+}
+
+.heart {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  justify-content: flex-end;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
 
 .img {
@@ -264,6 +288,7 @@ nav .navigation .navigation-btntext {
   display: flex;
   align-items: center;
   top: 15px;
+  color: #008766;
   /* Green */
   background: #99E2D0;
   /* Shadow/ss */
@@ -272,14 +297,14 @@ nav .navigation .navigation-btntext {
 }
 
 a {
+  display: flex;
   text-decoration: none;
   color: #000000;
 }
 
 .liencards {
-  display: inline-block;
+  display: flex;
   width: 350px;
-  height: 251px;
 }
 
 footer {
@@ -324,4 +349,8 @@ footer .fa-sharp {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 970px) {
+  .explorerparagraphe {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
