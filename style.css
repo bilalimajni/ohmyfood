@@ -94,7 +94,7 @@ nav {
   flex-direction: column;
 }
 nav .blocnav {
-  width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,26 +105,24 @@ nav .titlenav {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  margin-left: 10%;
+  margin-left: 16%;
   display: flex;
   justify-content: start;
-  margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   right: 0px;
   align-self: flex-start;
   color: #000000;
 }
 nav .navigation {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 350px;
+  width: 100%;
 }
 nav .navigation-btn {
-  width: 322.49px;
+  width: 70%;
   height: 72.38px;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -137,9 +135,10 @@ nav .navigation-btn {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   cursor: pointer;
+  counter-increment: compteListe 1;
+  position: relative;
 }
 nav .navigation-btn::before {
-  counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9356dc;
   height: 1.5rem;
@@ -150,7 +149,7 @@ nav .navigation-btn::before {
   align-items: center;
   color: #fff;
   position: absolute;
-  left: -1px;
+  left: -9px;
 }
 nav .navigation-btn:hover {
   background: #F5EDFF;
@@ -175,6 +174,7 @@ nav .navigation .navigation-btntext {
   background: #f6f6f6;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .bloccards .sectiontitle {
   color: #000000;
@@ -185,6 +185,7 @@ nav .navigation .navigation-btntext {
   line-height: 28px;
   display: flex;
   align-self: flex-start;
+  margin-left: 16%;
   color: #000000;
 }
 .bloccards .lescards {
@@ -192,13 +193,13 @@ nav .navigation .navigation-btntext {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 351px;
+  width: 100%;
 }
 .bloccards .card {
   display: flex;
   flex-direction: column;
   height: 251px;
-  width: 350px;
+  width: 70%;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -220,7 +221,7 @@ nav .navigation .navigation-btntext {
 .bloccards .card i {
   position: absolute;
   font-size: 21.8px;
-  transform: translate(-6.4px, -3px);
+  transform: translate(-6px, -3px);
 }
 .bloccards .card .heartsolide {
   display: flex;
@@ -229,10 +230,11 @@ nav .navigation .navigation-btntext {
   opacity: 0;
   background-clip: text;
   -webkit-background-clip: text;
-  transition: all 0.33s ease-out;
+  transform: scale(1);
+  transition: all transform 0.33s ease-out;
 }
 .bloccards .card .heartsolide:hover {
-  transform: translate(-6.4px, -3px) scale(1.1);
+  transform: translate(-6px, -3px) scale(1.1);
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   opacity: 1;
 }
@@ -248,7 +250,7 @@ nav .navigation .navigation-btntext {
 }
 
 .img {
-  width: 350px;
+  width: 100%;
   height: 180px;
   box-sizing: border-box;
   border-radius: 15px 15px 0px 0px;
@@ -349,8 +351,46 @@ footer .fa-sharp {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 970px) {
-  .explorerparagraphe {
+@media screen and (min-width: 970px) {
+  nav .blocnav {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .titlenav {
+    margin-left: 30px;
+  }
+  nav .navigation {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 262px;
+  }
+  nav .navigation-btn {
+    width: 30%;
+  }
+  .bloccards {
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .bloccards .lescards {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .bloccards .lescards .card {
+    width: 23%;
+  }
+  .bloccards .sectiontitle {
+    margin-left: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

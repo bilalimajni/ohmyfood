@@ -103,7 +103,7 @@ nav {
     flex-direction: column;
 
     .blocnav {
-        width: 350px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center
@@ -113,11 +113,10 @@ nav {
         @include roboto;
         font-weight: 700;
         font-size: 24px;
-        margin-left: 10%;
+        margin-left: 16%;
         display: flex;
         justify-content: start;
-        margin: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         right: 0px;
         align-self: flex-start;
 
@@ -126,13 +125,13 @@ nav {
     }
 
     .navigation {
-        position: relative;
+      
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         display: flex;
-        width: 350px;
+        width: 100%;
 
 
 
@@ -143,28 +142,20 @@ nav {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
             cursor: pointer;
-
+            counter-increment: compteListe 1;
+             position: relative;
             &::before {
-               
-               
-                counter-increment:  (compteListe 1) ;
                 content: counter(compteListe) " ";
-        
-                    background: #9356dc;
-                    height: 1.5rem;
-                    width: 1.5rem;
-                    border-radius: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    position: absolute;
-                    left: -1px;
-
-              
-
-
-
+                background: #9356dc;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                position: absolute;
+                left: -9px;
 
             }
 
@@ -173,7 +164,7 @@ nav {
                 /* Shadow/Instructions */
 
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-                color:#9356DC;
+                color: #9356DC;
                 border-radius: 20px;
 
             }
@@ -202,6 +193,7 @@ nav {
     background: #f6f6f6;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     .sectiontitle {
         @include roboto;
@@ -210,14 +202,14 @@ nav {
         line-height: 28px;
         display: flex;
         align-self: flex-start;
-
+  margin-left: 16%;
         color: #000000;
     }
 
     .lescards {
         flex-direction: column;
         @include alignecenter;
-        width: 351px;
+        width: 100%;
     }
 
     .card {
@@ -228,14 +220,14 @@ nav {
         margin-bottom: 15px;
 
         &textcoeur {
-          
+
             cursor: pointer;
             width: 200px;
-          
+
 
 
         }
-       
+
 
         p {
             margin-bottom: 5px;
@@ -247,41 +239,43 @@ nav {
             margin-left: 15px;
             margin-right: 15px;
         }
-        i{
+
+        i {
             position: absolute;
             font-size: 21.8px;
-            transform:  translate(-6.4px, -3px);
+            transform: translate(-6px, -3px);
         }
 
-       .heartsolide{
+        .heartsolide {
             display: flex;
             align-items: flex-end;
-           
-         
-           color: transparent;
-     
 
-           opacity: 0; 
-           background-clip: text;
-           -webkit-background-clip: text;
-            transition: all 0.33s ease-out;
-       
-           
-            
-           
-    
-           &:hover{
-            transform:translate(-6.4px, -3px) scale(1.1);
-          
-              background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-            
-             
-            opacity: 1;
-    
-            
-           }
-           
-           
+
+            color: transparent;
+
+
+            opacity: 0;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transform: scale(1);
+            transition: all transform 0.33s ease-out;
+
+
+
+
+
+            &:hover {
+                transform: translate(-6px, -3px) scale(1.1);
+
+                background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+
+                opacity: 1;
+
+
+            }
+
+
 
 
 
@@ -290,17 +284,18 @@ nav {
     }
 
 }
- .heart{
-            display: flex;
-            align-items: center;
-            width:30px;
-            justify-content: flex-end;
-            position: absolute;
-            right: 30px;
-             bottom: 30px;
-          
-        }
-      
+
+.heart {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+}
+
 
 .img {
     @include imgrestaurant;
@@ -337,7 +332,7 @@ nav {
     display: flex;
     align-items: center;
     top: 15px;
-    color: #008766 ; 
+    color: #008766;
 
 
 
@@ -353,9 +348,9 @@ nav {
 }
 
 a {
-   
+
     display: flex;
-   
+
 
     text-decoration: none;
     color: #000000;
@@ -364,8 +359,8 @@ a {
 
 .liencards {
     display: flex;
-   width: 350px;
-   
+    width: 350px;
+
 }
 
 footer {
@@ -419,9 +414,54 @@ footer {
 }
 
 
-@media screen and (max-width: 970px) {
-    .explorerparagraphe {
+@media screen and (min-width: 970px) {
+
+    nav .blocnav {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    nav{
+        .titlenav{
+            margin-left:30px ;
+        }
+       .navigation {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 262px;
+        &-btn{
+            width: 30%;
+        }
+    } 
+    } 
+   
+.bloccards {
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+     .lescards {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        & .card  {
+            width: 23%;
+        }
+      }
+      .sectiontitle{
+        margin-left: 30px;
+      }
+  }
+  
+
 
 }
