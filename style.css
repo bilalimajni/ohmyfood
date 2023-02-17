@@ -1,3 +1,23 @@
+.lm {
+  display: flex;
+}
+
+@keyframes animation-check {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes animationcheck {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(80degdeg);
+  }
+}
 BODY {
   margin: 0PX;
 }
@@ -335,6 +355,7 @@ footer li {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  display: flex;
 }
 footer li a {
   color: white;
@@ -349,6 +370,180 @@ footer .titlefooter {
 }
 footer .fa-sharp {
   margin-right: 10px;
+}
+
+/**restaurent1**/
+.imgrestaurent {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 100%;
+  height: 1517px;
+  background: #F7F7F7;
+  border-radius: 40px 40px 0px 0px;
+  transform: translateY(-40px);
+  flex-direction: column;
+}
+.menu .titleheart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.menu .titleheart .titlerestaurent {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  color: #101010;
+}
+.menu .titleheart i {
+  position: absolute;
+  transform: translate(-6px, -3px);
+}
+.menu .titleheart .heartsolide {
+  display: flex;
+  align-items: flex-end;
+  color: transparent;
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1);
+  transition: all transform 0.33s ease-out;
+}
+.menu .titleheart .heartsolide:hover {
+  transform: translate(-6px, -3px) scale(1.1);
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  opacity: 1;
+}
+
+.titlecard {
+  height: 27px;
+  width: 275px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #000000;
+  line-height: 18.75px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  margin-left: 30px;
+}
+
+.lescarsrestaurents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lescarsrestaurents .cardrestaurent {
+  width: 90%;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  background: #FFFFFF;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+  height: 90px;
+  border-radius: 15.0431032181px;
+  margin-bottom: 20px;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte:hover .valider {
+  opacity: 1;
+  margin-right: 0rem;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .restaurantIngrediant {
+  width: 80%;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte h3 {
+  margin-left: 7px;
+  margin-bottom: 10px;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .textPrixRestaurent {
+  display: flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .textPrixRestaurent p {
+  align-items: start;
+  margin: 0px;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .textPrixRestaurent .nomRestaurent {
+  margin: 0px;
+  margin-left: 7px;
+  margin-right: 5px;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .priceIngrediant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20px;
+  margin-right: 5px;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .valider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  height: 100%;
+  width: 59px;
+  border-radius: [object Object] px;
+  margin-right: -4rem;
+  transition: margin-right 0.4s ease-in;
+  opacity: 0;
+  overflow: hidden;
+}
+.lescarsrestaurents .cardrestaurent .elementCarte .valider .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #99E2D0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.lescarsrestaurents:hover .check i {
+  animation: animationcheck 0.6s ease-in;
+}
+
+.button-restaurent {
+  text-decoration: none;
+  border: none;
+  color: white;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: none;
+  cursor: pointer;
+  border-radius: 25px;
+  height: 50px;
+  width: 186px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.button-restaurent:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 @media screen and (min-width: 970px) {
@@ -393,4 +588,34 @@ footer .fa-sharp {
   .bloccards .sectiontitle {
     margin-left: 30px;
   }
-}/*# sourceMappingURL=style.css.map */
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .titlefooter {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer .blocfooter {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  footer li {
+    display: flex;
+    margin: 10px;
+  }
+  footer li a {
+    color: white;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+@media screen and (min-wi
