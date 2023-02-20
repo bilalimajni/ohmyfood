@@ -1,0 +1,44 @@
+
+
+
+
+
+/**animation validation cards**/
+@keyframes animationcheck {
+
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(80deg);
+    }
+}
+
+/**effacer le loader**/
+
+@keyframes effacer {
+    to {
+        transform: scale(0);
+
+    }
+}
+/**effacer le loader**/
+
+
+@keyframes effacer1 {
+    to {
+        transform: scale(0);
+
+    }
+}
+
+/**animation loader**/
+
+@keyframes animationLoader {
+    to {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+

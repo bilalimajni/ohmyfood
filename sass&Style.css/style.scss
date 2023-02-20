@@ -1,4 +1,5 @@
-
+@import "animation.scss";
+@import "mixin.scss";
 
 
 
@@ -7,6 +8,9 @@ BODY {
 
 }
 
+
+
+/** localisation explorer les restaurent est titre**/
 header {
     width: 100%;
 
@@ -34,6 +38,9 @@ header {
 
     .titlehedear {
         @include titleohmyfood;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
@@ -42,6 +49,7 @@ header {
 
 }
 
+/** localisation du restaurent**/
 .localisation {
     display: flex;
     align-items: center;
@@ -64,6 +72,7 @@ header {
 
 }
 
+/**btn explorer les restaurents**/
 .explorer {
     background: #f6f6f6;
     display: flex;
@@ -81,8 +90,12 @@ header {
         @include roboto;
         width: 230px;
         height: 68px;
+        font-size: 24px;
         text-align: center;
         margin: 0px;
+        font-family: 'roborto';
+        font-style: normal;
+        font-weight: 700;
     }
 
     &paragraphe {
@@ -95,6 +108,7 @@ header {
         text-align: center;
         margin: 0px;
 
+
     }
 
     &-btn {
@@ -103,7 +117,7 @@ header {
         color: white;
         background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        background-color: none;
+       
         cursor: pointer;
         border-radius: 25px;
         height: 50px;
@@ -115,6 +129,7 @@ header {
         font-weight: 500;
         font-size: 16px;
         color: white;
+        margin-top: 15px;
 
         &:hover {
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -129,7 +144,14 @@ header {
 
 
 
+/** btn 
 
+Choisissez un restaurant
+
+Composez votre menu
+
+Dégustez au restaurant
+**/
 nav {
     display: flex;
     align-items: center;
@@ -270,6 +292,13 @@ nav {
 
     }
 
+    .textcards {
+        margin-top: 0px;
+        @include roboto;
+        font-weight: 300;
+        font-size: 17px;
+    }
+
     .prixcards {
         display: flex;
         height: 55%;
@@ -280,13 +309,20 @@ nav {
     p {
         margin-bottom: 5px;
         margin-left: 15px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 12px;
+        color: #000000;
     }
 
 
 
     i {
         position: absolute;
-        font-size: 21.8px;
+        font-size: 22px;
         transform: translate(-6px, -3px);
     }
 
@@ -387,11 +423,13 @@ nav {
 
 a {
 
+    
     display: flex;
-
-
+    flex-direction: column;
+    margin-bottom: -4px;
     text-decoration: none;
     color: #000000;
+    justify-content: center;
 
 }
 
@@ -401,6 +439,291 @@ a {
 
 }
 
+
+
+/**restaurent1**/
+.imgrestaurent {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    box-sizing: border-box;
+    z-index: -1;
+    position: relative;
+
+}
+
+.menu {
+    width: 100%;
+    height: 1517px;
+    background: #F7F7F7;
+    border-radius: 40px 40px 0px 0px;
+    flex-direction: column;
+    margin-top: -46px;
+
+    .titleheart {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+        .titlerestaurent {
+            font-family: 'Shrikhand';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 41px;
+            color: #101010;
+
+        }
+
+        i {
+            transform: translate(-6px, -3px);
+            font-size: 22px;
+            position: absolute;
+
+        }
+
+        .heartsolide {
+            display: flex;
+            align-items: flex-end;
+
+            color: transparent;
+            opacity: 0;
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            transition: all 0.6s ease-out;
+
+
+
+
+
+            &:hover {
+
+                transform: translate(-6px, -3px) scale(1.05);
+                background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+
+                opacity: 1;
+
+
+            }
+
+
+
+
+
+        }
+    }
+
+
+}
+
+.titlecard {
+    height: 27px;
+    width: 275px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 18.75px;
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    margin-left: 12%;
+}
+
+.lescarsrestaurents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cardrestaurent {
+
+        width: 80%;
+        box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+        background: #FFFFFF;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15.0431px;
+        height: 90px;
+        border-radius: 15.043103218078613px;
+        margin-bottom: 20px;
+
+
+        .elementCarte {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            overflow: hidden;
+
+            &:hover {
+                .valider {
+                    opacity: 1;
+                    margin-right: 0rem;
+                }
+            }
+
+            .restaurantIngrediant {
+                width: 80%;
+
+            }
+
+            .nomMenu {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21px;
+
+                color: #000000;
+            }
+
+            h3 {
+                margin-left: 7px;
+                margin-right: 7px;
+                margin-bottom: 10px;
+            }
+
+            .textPrixRestaurent {
+                display: flex;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
+                justify-content: space-between;
+
+
+                .prixcards {
+                    margin: 0px;
+                    margin-right: 15px;
+                    margin-left: -20px;
+                    display: flex;
+                    align-items: end;
+                    height: 50%;
+                }
+
+
+
+                .nomRestaurent {
+                    margin: 0px;
+                    margin-left: 7px;
+                    margin-right: 5px;
+                    align-items: center;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+
+            .namerestaurent {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-right: 7px;
+
+            }
+
+            .priceIngrediant {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 20px;
+                margin-right: 5px;
+            }
+
+            .valider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #99E2D0;
+                border-radius: 0px 15px 15px 0px;
+                height: 100%;
+                width: 59px;
+              
+                margin-right: -4rem;
+                transition: margin-right 0.4s ease-in;
+                opacity: 0;
+                overflow: hidden;
+
+                .check {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    color: #99E2D0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+
+
+
+
+                }
+            }
+        }
+
+
+        &:hover .check {
+            i {
+                animation: animationcheck 0.4s ease-in;
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+    }
+
+
+}
+
+
+
+.marginTop {
+    margin-top: 45px;
+}
+.marginTop1 {
+    margin-top: 85px;
+}
+.button-restaurent {
+    text-decoration: none;
+    border: none;
+    color: white;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+ 
+    cursor: pointer;
+    border-radius: 25px;
+    height: 50px;
+    width: 186px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/** btn commander**/
+.btn-bas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+/**footer**/
 footer {
 
     display: flex;
@@ -461,266 +784,11 @@ footer {
 
 
 
-/**restaurent1**/
-.imgrestaurent {
-    width: 100%;
-    height: 275px;
-    object-fit: cover;
-    box-sizing: border-box;
-    z-index: -1;
-    position: relative;
 
-}
 
-.menu {
-    width: 100%;
-    height: 1517px;
-    background: #F7F7F7;
-    border-radius: 40px 40px 0px 0px;
-    flex-direction: column;
-    margin-top: -46px;
 
-    .titleheart {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
 
-        .titlerestaurent {
-            font-family: 'Shrikhand';
-            font-style: italic;
-            font-weight: 400;
-            font-size: 28px;
-            line-height: 41px;
-            color: #101010;
-
-        }
-
-        i {
-            transform: translate(-6px, -3px) scale(1);
-            font-size: 22px;
-            position: absolute;
-
-        }
-
-        .heartsolide {
-            display: flex;
-            align-items: flex-end;
-
-            color: transparent;
-            opacity: 0;
-            background-clip: text;
-            -webkit-background-clip: text;
-
-            transition: all 0.6s ease-out;
-
-
-
-
-
-            &:hover {
-
-                transform: translate(-6px, -3px);
-                background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-
-
-                opacity: 1;
-
-
-            }
-
-
-
-
-
-        }
-    }
-
-
-}
-
-.titlecard {
-    height: 27px;
-    width: 275px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #000000;
-    line-height: 18.75px;
-    border-bottom: 3px solid #99E2D0;
-    width: 40px;
-    margin-left: 7%;
-}
-
-.lescarsrestaurents {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .cardrestaurent {
-
-        width: 80%;
-        box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
-        background: #FFFFFF;
-        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-        border-radius: 15.0431px;
-        height: 90px;
-        border-radius: 15.043103218078613px;
-        margin-bottom: 20px;
-
-
-        .elementCarte {
-            display: flex;
-            justify-content: space-between;
-            height: 100%;
-            overflow: hidden;
-
-            &:hover {
-                .valider {
-                    opacity: 1;
-                    margin-right: 0rem;
-                }
-            }
-
-            .restaurantIngrediant {
-                width: 80%;
-            }
-
-
-            h3 {
-                margin-left: 7px;
-                margin-right:7px;
-                margin-bottom: 10px;
-            }
-
-            .textPrixRestaurent {
-                display: flex;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                width: 100%;
-                justify-content: space-between;
-
-
-                .prixcards {
-                    margin: 0px;
-                    margin-right: 15px;
-                    margin-left: -20px;
-                    display: flex;
-                    align-items: end;
-                    height: 50%;
-                }
-
-
-
-                .nomRestaurent {
-                    margin: 0px;
-                    margin-left: 7px;
-                    margin-right: 5px;
-                    align-items: center;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                }
-            }
-            .namerestaurent{
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                margin-right: 7px;
-
-            }
-
-            .priceIngrediant  {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 20px;
-                margin-right: 5px;
-            }
-
-            .valider {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #99E2D0;
-                border-radius: 0px 15px 15px 0px;
-                height: 100%;
-                width: 59px;
-                border-radius: [object Object]px;
-                margin-right: -4rem;
-                transition: margin-right 0.4s ease-in;
-                opacity: 0;
-                overflow: hidden;
-
-                .check {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: white;
-                    color: #99E2D0;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-
-
-
-                }
-            }
-        }
-
-
-
-
-
-
-    }
-
-    &:hover .check {
-        i {
-            animation: animationcheck 0.6s ease-in;
-
-        }
-
-
-
-
-    }
-
-
-}
-
-.btn-bas {
-    display: flex;
-    justify-content: center;
-    margin-top: 85px;
-}
-
-.button-restaurent {
-    text-decoration: none;
-    border: none;
-    color: white;
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background-color: none;
-    cursor: pointer;
-    border-radius: 25px;
-    height: 50px;
-    width: 186px;
-    border-radius: 25px;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    }
-}
-
-
-
+/** media screen**/
 @media screen and (min-width: 970px) {
     .body {
         display: block;
@@ -751,6 +819,7 @@ footer {
 
             &-btn {
                 width: 30%;
+
             }
         }
     }
@@ -781,7 +850,7 @@ footer {
             width: 100%;
 
             & .card {
-                width: 23%;
+                width: 24%;
             }
         }
 
@@ -805,7 +874,7 @@ footer {
             line-height: 26px;
             height: 27px;
             width: 137.58163452148438px;
-            border-radius: nullpx;
+            
             text-align: end;
 
 
@@ -845,7 +914,7 @@ footer {
 }
 
 @media screen and (min-width: 970px) {
-    body {
+    #body-laPalette {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -883,13 +952,65 @@ footer {
     }
 }
 
-@keyframes animationcheck {
 
-    0% {
-        transform: rotate(180deg);
-    }
 
-    100% {
-        transform: rotate(80degdeg);
-    }
+
+
+/** loader**/
+.loader {
+
+
+    animation: effacer 8s forwards;
+    opacity: 0.8;
+
+    display: flex;
+    justify-content: left;
+  
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+
+
+
+}
+
+.loader-content {
+    width: 80px;
+    height: 80px;
+    border: 5px solid gray;
+    border-top-color: violet;
+    border-bottom-color: palegreen;
+    border-radius: 50%;
+    animation: animationLoader 8s infinite forwards;
+
+}
+
+.loader2 {
+
+
+    animation: effacer1 8s forwards;
+    opacity: 0.8;
+
+
+    justify-content: right;
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+
+
+
+}
+
+.loader-content2 {
+    width: 80px;
+    height: 80px;
+    border: 5px solid gray;
+    border-top-color: violet;
+    border-bottom-color: palegreen;
+    border-radius: 50%;
+    animation: animationLoader 8s infinite forwards;
+
 }
